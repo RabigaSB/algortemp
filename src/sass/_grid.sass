@@ -1,0 +1,36 @@
+.al-row
+  +tablet
+    display: flex
+    flex-wrap: wrap 
+
+$width_col__4: percentage(270px/$container-size)
+$width_col__2: percentage(570px/$container-size)
+
+.al-col
+  &__4
+    +tablet
+      width: $width_col__2
+      margin-right: 100% - $width_col__2*2
+      &:nth-child(2n)
+        margin-right: 0
+    +tablet-desktop
+      width: $width_col__4
+      margin-right: (100% - $width_col__4*4) / 3
+      &:nth-child(2n)
+        margin-right: (100% - $width_col__4*4) / 3
+    &:last-child
+      margin-right: 0
+  &__2
+    +tablet
+      width: $width_col__2
+      margin-right: 100% - $width_col__2*2
+      &:nth-child(2n)
+        margin-right: 0
+    &:last-child
+      margin-right: 0
+  
+
+
+
+
+  

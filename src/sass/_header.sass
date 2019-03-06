@@ -1,0 +1,113 @@
+%before-icons
+  font-size: 14px
+  font-family: $font-awesome
+  padding-right: 4px
+
+.al-header
+  color: white
+  &_contacts
+    background: $firm-color
+    padding: 5px
+    &__left
+      float: left
+    &__right
+      float: right
+  &_phone,
+  &_address,
+  &_timetable
+    display: inline-block
+    font-size: 12px
+  &_phone
+    &:hover
+      color: lighten($firm-color, 50%)
+    &::before
+      content: ""
+      @extend %before-icons
+  &_address::before
+    content: "\f041"
+    @extend %before-icons
+  &_timetable::before
+    content: "\f017"
+    @extend %before-icons
+  &_log
+    padding-top: 20px
+    display: inline-block
+    &:focus
+      color: lighten($firm-color, 50%)
+      cursor: pointer
+    +tablet-desktop
+      padding-top: 0
+      &:hover
+        color: lighten($firm-color, 50%)
+        cursor: pointer
+
+.al-logo
+  float: left
+  display: block
+  width: 180px
+  height: 80px
+  background: url('../assets/design/algor-logo.png') left top no-repeat
+  background-size: contain
+
+.al-menu
+  color: $firm-color
+  float: right
+  &_list
+    position: absolute
+    left: 0
+    right: 0
+    z-index: 10
+    list-style: none
+    padding-top: 15px
+    padding-bottom: 15px
+    margin-top: 25px
+    background: white
+    display: none
+    +tablet
+      padding: 0
+      margin: 0
+      position: static
+      display: flex
+      justify-content: space-around
+      transform: none
+      background: transparent
+  &_toggle-bars
+    display: inline-block
+    padding: 8px 10px 0
+    font-size: 30px
+    color: $firm-color
+    +tablet
+      display: none
+  &_bars
+    display: none
+    &:checked + .al-menu_list
+      display: block
+
+
+  &_link
+    font-weight: $fw-semibold
+    text-transform: capitalize
+    padding: 15px 15px 6px
+    margin: 8px 9px
+    font-size: 14px
+    display: block
+    border-bottom: 1px solid $firm-color
+    &:focus
+      box-shadow: 0 2px 0 0 $firm-color
+      color: lighten($firm-color, 20%)
+    +tablet
+      display: inline-block
+      border-bottom: 1px solid transparent
+    +tablet-desktop
+      &:hover
+        box-shadow: 0 2px 0 0 $firm-color
+        color: darken($firm-color, 20%)
+  &__pt
+    padding-top: 6px
+    position: relative
+      
+@keyframes menu
+    from
+      box-shadow: 0 0 35px 0px $firm-color
+    to
+      box-shadow: 0 0 45px 20px rgba(255, 255, 255, 0.5)

@@ -1,0 +1,302 @@
+#go-top
+  position: fixed
+  bottom: 30px
+  right: 30px
+  width: 40px
+  height: 40px
+  z-index: 1000
+  border-radius: 50%
+  color: white
+  background-color: $firm-color
+  text-align: center
+  line-height: 1.25
+  font-size: 30px
+  display: none
+
+%btn
+  display: inline-block
+  border-radius: 4px
+  color: white
+  font-weight: $fw-semibold
+  font-size: 20px
+  padding: 12px 10px
+  width: 180px
+  text-align: center
+  text-transform: uppercase
+.al-btn
+  &__blue
+    @extend %btn
+    +btn($firm-color, $firm-color-darker)
+
+
+
+.al-promo
+  background: blue url('../assets/design/promo-bird.jpg') center no-repeat
+  background-size: cover
+  +tablet
+    height: 100%
+  &_text
+    max-width: 600px
+    margin-left: 15%
+    margin-top: 10%
+    font-family: 'Archivo Black', sans-serif
+  &_title
+    font-size: 30px
+    line-height: 1
+    margin-bottom: 10px
+    font-weight: bold
+    background: -webkit-linear-gradient(#ff3a84, #407ab8)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    +tablet
+      font-size: 60px
+    +desktop
+      font-size: 80px
+    &__small
+      font-size: 25px
+      display: block
+      padding: 20px 0
+  &_text-under-title
+    display: none
+    margin: 0
+    box-sizing: border-box
+    padding: 9px 20px 13px
+    line-height: 1.5
+    border-radius: 4px
+    background: rgba(0, 0, 0, 0.5)
+  &_img
+    height: 500px
+    object-fit: cover
+    +tablet
+      object-fit: none
+
+.al-about
+  padding: 0 0 20px
+  background: white url('../assets/design/algor_study_logo-bg.gif') center no-repeat
+  &_text
+    color: #666
+    line-height: 1.5
+    margin-top: 0
+  &_title
+    font-size: 30px
+    font-weight: bold
+    color: #192041
+    position: relative
+    text-align: center
+    padding: 40px 0
+    +tablet
+      font-size: 36px
+  &__left
+    box-sizing: border-box
+    padding-right: 20px
+    +tablet
+      width: percentage(570px/$container-size)
+      float: left
+  &__right
+    +tablet
+      width: percentage(600px/$container-size)
+      float: right
+  &_img
+    width: 100%
+    height: auto
+
+
+.al-course
+  background: #fafafa
+  padding: 40px 0
+  box-sizing: border-box
+  +tablet
+    padding: 70px 0
+  &-card
+    position: relative
+    box-sizing: border-box
+    box-shadow: 0 0 20px 0 $grey-darker
+    text-align: center
+    line-height: 1.5
+    padding: 20px
+    background: white
+    border-radius: 5px
+    margin-bottom: 50px
+    +tablet
+      height: 90%
+    &_title
+      font-size: 24px
+      margin: 0
+      color: $firm-color
+      +tablet-desktop
+        font-size: 20px
+      +desktop
+        font-size: 24px
+      &__main
+        font-size: 30px
+        margin-bottom: 30px
+        color: $firm-color-darker
+        text-align: center
+        +tablet-desktop
+          font-size: 36px
+          margin-bottom: 60px
+    &_text
+      display: block
+      font-size: 0.875rem
+      color: #666
+    &_price
+      font-weight: $fw-extrabold
+      display: block
+      font-size: 32px
+      color: $firm-color
+      &::after
+        content: ""
+        display: block
+        border-top: 1px solid $firm-color
+        margin-bottom: 30px
+      +tablet-desktop
+        font-size: 28px
+      +desktop
+        font-size: 32px
+    &_list
+      margin-top: 10px
+      text-align: left
+      font-size: 0.875rem
+      margin-bottom: 20px
+      &-item
+        &::before
+          content: ""
+          font-family: $font-awesome
+          display: inline-block
+          color: $firm-color
+          font-size: 12px
+          padding-right: 9px
+
+
+.al-achievement
+  padding: 40px 0
+  color: $firm-color
+  text-align: center
+  border-top: 1px solid $firm-color
+  border-bottom: 1px solid $firm-color
+  &_card
+    box-sizing: border-box
+    padding: 40px 0
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+  &_number
+    display: block
+    font-size: 30px
+    font-weight: bold
+    width: 190px
+    height: 70px
+    position: relative
+    +tablet-desktop
+      font-size: 45px
+      height: 110px
+    &::after
+      position: absolute
+      top: 50px
+      left: 25%
+      content: ""
+      display: block
+      width: 50%
+      border-bottom: 1px solid $firm-color
+      +tablet-desktop
+        top: 80px
+
+
+
+
+
+.al-feedback
+    padding: 40px 0
+    background: url('../assets/design/algor_study_logo-bg.gif') center no-repeat
+    +tablet-desktop
+        padding-bottom: 80px
+    &_title
+        font-size: 30px
+        color: $firm-color-darker
+        text-align: center
+        +tablet
+            font-size: 36px
+    &_card
+        margin-top: 10px
+    &_text
+        font-size: 14px
+        line-height: 1.5
+        color: #666
+        &::before
+            content: "\f10d"
+            display: block
+            font-family: $font-awesome
+            font-size: 30px
+            line-height: 1.5
+            color: $firm-color
+    &_person
+        margin-top: 19px
+    &__avatar
+        display: inline-block
+        width: 65px
+        height: 65px
+        border-radius: 50%
+    &__name
+        display: inline-block
+        font-weight: bold
+        margin-left: 5px
+        font-size: 14px
+        color: $firm-color-darker
+        +tablet
+            margin-left: 20px
+            font-size: 18px
+    &__major
+        display: inline-block
+        font-weight: 300
+        color: $firm-color
+        margin-left: 12px
+        font-size: 13px
+        +tablet
+            margin-left: 2px
+            font-size: 16px
+
+
+
+
+
+
+%connections-icons
+  font-size: 24px
+  font-family: $font-awesome
+  padding-right: 20px
+  color: $firm-color-lighter
+
+.al-connections
+  padding: 40px 0
+  color: #666
+  +tablet
+    padding: 60px 0
+  +tablet-desktop
+    padding-top: 80px
+  &_wrap
+    margin-left: 40px
+  &_title
+    margin: 0
+    font-size: 36px
+    color: $firm-color-darker
+  &_address_text
+    margin: 0
+  &_address,
+  &_phone,
+  &_email
+    font-size: 24px
+    margin-bottom: 0
+    margin-top: 40px
+    color: $firm-color
+  &_address::before
+    @extend %connections-icons
+    content: ""
+  &_phone::before
+    @extend %connections-icons
+    content: ""
+  &_email::before
+    @extend %connections-icons
+    content: ""
+
+
