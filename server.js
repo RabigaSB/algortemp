@@ -4,6 +4,10 @@ const path = require('path');
 
 const app = express();
 
+// for Security connection
+var forceSsl = require('force-ssl-heroku');
+app.use(forceSsl);
+
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/algortemp'));
 
